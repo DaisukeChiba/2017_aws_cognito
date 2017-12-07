@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+
+    <!-- 全処理共通 開始 -->
+    <meta charset="UTF-8">
+
+    <!-- jQuery -->
+    <script src="js/jquery.min.js"></script>
+
+    <!-- Cognito用JS -->
+    <script src="js/jsbn.js"></script>
+    <script src="js/jsbn2.js"></script>
+    <script src="js/sjcl.js"></script>
+    <script src="js/aws-cognito-sdk.min.js"></script>
+    <script src="js/amazon-cognito-identity.min.js"></script>
+
+    <!-- サインアップ・アクティベーション・サインイン用JS -->
+    <script src="js/cognito.js"></script>
+
+    <!-- 全処理共通 終了 -->
+    <title>サインアップ</title>
+
+</head>
+
+<body>
+    <form>
+        <h2>サインアップ</h2>
+        <div>
+            <label>Eメールアドレス</label>
+            <input type="email" id="email" />
+        </div>
+        <div>
+            <label>パスワード</label>
+            <input type="password" id="password" />
+        </div>
+        <input onClick="signup();" type="button" value="サインアップ" />
+    </form>
+</body>
+</html>

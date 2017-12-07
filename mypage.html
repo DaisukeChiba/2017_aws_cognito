@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <!-- jQuery -->
+    <script src="js/jquery.min.js"></script>
+
+    <!-- Cognito用JS -->
+    <script src="js/jsbn.js"></script>
+    <script src="js/jsbn2.js"></script>
+    <script src="js/sjcl.js"></script>
+    <script src="js/aws-cognito-sdk.min.js"></script>
+    <script src="js/amazon-cognito-identity.min.js"></script>
+
+    <!-- マイページ用JS -->
+    <script src="js/mypage.js"></script>
+
+    <title>マイページ</title>
+
+</head>
+
+<body>
+    <h2>マイページ</h2>
+    <h5 id="username"></h5>
+    <form>
+        <input onClick="signout();" type="button" value="サインアウト" />
+    </form>
+</body>
+</html>
