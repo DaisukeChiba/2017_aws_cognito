@@ -18,12 +18,9 @@ function signup(){
     // サインアップ処理
     userPool.signUp($('#email').val(), $('#password').val(), attributeList, null, function(err, result){
         if (err) {
-            console.log(err);
             alert('サインアップに失敗しました');
             return;
         }
-        console.log('user name is ' + result.user.getUsername());
-        console.log('call result: ' + result);
         alert('サインアップが完了しました\n' +
         'verification codeを記載したメールを送信しましたので' +
         '次のアクティベーション画面で登録してください');
@@ -41,11 +38,9 @@ function activation(){
     // アクティベーション処理
     cognitoUser.confirmRegistration($('#actcode').val(), true, function(err, result) {
         if (err) {
-            console.log(err);
             alert('アクティベーションに失敗しました');
             return;
         }
-        console.log('call result: ' + result);
         alert('アクティベーションが完了しました\n' +
         '次の画面でサインインを行ってください');
         $(location).attr('href', 'signin.html');
@@ -69,7 +64,6 @@ function signin(){
             $(location).attr('href', 'mypage.html');
         },
         onFailure: function(err) {
-            console.log(err);
             alert('サインインに失敗しました');
             return;
         },
