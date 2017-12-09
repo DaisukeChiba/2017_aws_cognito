@@ -18,21 +18,21 @@ if (cognitoUser != null) {
                     return;
                 }
                 // Email(username)を表示
-                $("#username").html("Username: " + cognitoUser.username);
+                document.getElementById('username').innerHTML = 'Username: ' + cognitoUser.username;
             });
         } else {
             // サインイン未了のときサインイン画面に遷移
-            $(location).attr('href', 'signin.html');
+            location.href = 'signin.html';
         }
     });
 } else {
     // サインイン未了のときサインイン画面に遷移
-    $(location).attr('href', 'signin.html');
+    location.href = 'signin.html';
 }
 
 // サインアウト処理
 function signout(){
     cognitoUser.signOut();
     // サインイン画面に遷移
-    $(location).attr('href', 'signin.html');
+    location.href = 'signin.html';
 }
