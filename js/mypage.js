@@ -1,8 +1,8 @@
 // 共通設定
 AWSCognito.config.region = 'ap-northeast-1';
 var poolData = {
-    UserPoolId : 'ap-northeast-1_IOEk2ct2k',
-    ClientId: '7svf8diiuivfmu0r0pb8qenuer'
+    UserPoolId : 'ap-northeast-1_xxxxxxxxx',
+    ClientId: 'xxxxxxxxxxxxxxxxxxxxxxxxxx'
 };
 var userPool = new AWSCognito.CognitoIdentityServiceProvider.CognitoUserPool(poolData);
 
